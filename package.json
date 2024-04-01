@@ -36,7 +36,9 @@
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
 		"lint": "eslint \"src/**/*.ts\"",
-		"watch": "tsc -watch -p ./"
+		"watch": "tsc -watch -p ./",
+		"login": "vsce login khushmanvar",
+		"publish": "vsce publish"
 	},
 	"devDependencies": {
 		"@types/node": "^16.18.34",
