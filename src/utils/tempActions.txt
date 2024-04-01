@@ -1,0 +1,20 @@
+import { createAction, props } from "@ngrx/store";
+import { v4 as uuidv4 } from "uuid";
+
+export const EntityActions = {
+    GET_ENTITIES: createAction('[Store] GET Entities ' + uuidv4()),
+    GET_ENTITIES_SUCCESS: createAction('[Store] GET Entities Success ' + uuidv4(), props<{ entities: Array<any> }>()),
+    GET_ENTITIES_ERROR: createAction('[Store] GET Entities Error ' + uuidv4()),
+
+    GET_ENTITY: createAction('[Store] GET Entity ' + uuidv4(), props<{ entityId: string }>()),
+    GET_ENTITY_SUCCESS: createAction('[Store] GET Entity Success ' + uuidv4(), props<{ entity: any }>()),
+    GET_ENTITY_ERROR: createAction('[Store] GET Entity Error ' + uuidv4()),
+
+    POST_ENTITY: createAction('[Store] POST Entity ' + uuidv4(), props<{ entity: any }>()),
+    POST_ENTITY_SUCCESS: createAction('[Store] POST Entity Success ' + uuidv4(), props<{ entity: any }>()),
+    POST_ENTITY_ERROR: createAction('[Store] POST Entity Error ' + uuidv4()),
+
+    DELETE_ENTITY: createAction('[Store] DELETE Entity ' + uuidv4(), props<{ entityId: string }>()),
+    DELETE_ENTITY_SUCCESS: createAction('[Store] DELETE Entity Success ' + uuidv4(), props<{ entityId: string }>()),
+    DELETE_ENTITY_ERROR: createAction('[Store] DELETE Entity Error ' + uuidv4())
+}
